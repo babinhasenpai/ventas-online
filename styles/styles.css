@@ -1,0 +1,236 @@
+/* Reseteo de estilos y configuración general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f4f4; /* Un gris claro para mejor legibilidad */
+    line-height: 1.6;
+    color: #333; /* Color de texto principal */
+}
+
+/* Reusable container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Estilos del encabezado */
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 10px;
+    font-size: 2.5rem;
+}
+
+/* Navegación */
+.nav-menu {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Centrar los elementos del menú */
+    gap: 20px; /* Espacio entre los elementos del menú */
+    padding: 10px 0;
+}
+
+.nav-menu li a {
+    color: #1abc9c;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-menu li a:hover {
+    background-color: #1abc9c;
+    color: white;
+}
+
+/* Contenido principal */
+main {
+    padding: 20px;
+}
+
+/* Sección de bienvenida */
+.bienvenida {
+    text-align: center;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.bienvenida h2 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.bienvenida p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* Sección de productos */
+.producto-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.producto-tarjeta {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.producto-tarjeta:hover {
+    transform: translateY(-5px);
+}
+
+.producto-tarjeta img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.producto-tarjeta h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+.producto-tarjeta p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.producto-tarjeta button {
+    padding: 10px 20px;
+    background-color: #2c3e50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.producto-tarjeta button:hover {
+    background-color: #34495e;
+}
+
+/* Estilos del pie de página */
+footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+footer a {
+    color: #1abc9c;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+/* Sección Sobre Nosotros */
+.sobre-nosotros {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.sobre-nosotros h2 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.sobre-nosotros p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.7;
+}
+
+/* Sección Testimonios */
+.testimonios {
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.testimonios h2 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.testimonios blockquote {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+/* Sección Beneficios */
+.beneficios {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.beneficios h2 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.beneficios ul {
+    list-style: none;
+    padding: 0;
+}
+
+.beneficios li {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* Enlaces sociales en el footer */
+.social-links {
+    margin-top: 15px;
+}
+
+.social-links a {
+    color: #1abc9c;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: white;
+}
