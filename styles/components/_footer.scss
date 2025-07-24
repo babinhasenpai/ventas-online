@@ -1,0 +1,33 @@
+@use '../base/variables' as *;
+
+footer {
+  background-color: $color-principal;
+  color: $color-blanco;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+
+  .social-links {
+    margin-top: 15px;
+
+    a {
+      color: $color-acento;
+      text-decoration: none;
+      margin: 0 10px;
+      transition: color 0.3s;
+
+      &:hover {
+        color: $color-blanco;
+      }
+    }
+  }
+
+  a {
+    color: $color-acento;
+    text-decoration: none;
+
+    &:hover {
+      color: $color-blanco;
+    }
+  }
+}

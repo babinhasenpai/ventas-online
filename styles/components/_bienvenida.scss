@@ -1,0 +1,21 @@
+@use '../base/variables' as *;
+
+.bienvenida {
+  text-align: center;
+  padding: 30px;
+  background-color: $color-blanco;
+  border-radius: $radius;
+  box-shadow: $sombra-suave;
+  margin-bottom: 20px;
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: $color-principal;
+  }
+
+  p {
+    font-size: 1.1rem;
+    color: $color-texto;
+  }
+}

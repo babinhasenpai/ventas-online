@@ -1,0 +1,51 @@
+@use '../base/mixins' as *;
+@use '../base/variables' as *;
+
+.producto-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.producto-tarjeta {
+  @include tarjeta-visual($color-blanco);
+  padding: 15px;
+  text-align: center;
+  animation: fade-in 0.8s ease-out;
+ 
+
+  img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: $radius;
+    margin-bottom: 10px;
+  }
+
+  h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: $color-principal;
+  }
+
+  p {
+    font-size: 1rem;
+    color: $color-texto;
+    margin-bottom: 15px;
+  }
+
+  button {
+    padding: 10px 20px;
+    background-color: $color-principal;
+    color: $color-blanco;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: $color-secundario;
+    }
+  }
+}

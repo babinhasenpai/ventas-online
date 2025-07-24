@@ -1,0 +1,10 @@
+@mixin tarjeta-visual($bg, $radius: 8px, $sombra: 0 2px 5px rgba(0, 0, 0, 0.1)) {
+  background-color: $bg;
+  border-radius: $radius;
+  box-shadow: $sombra;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+}
