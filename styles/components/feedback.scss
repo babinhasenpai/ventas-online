@@ -1,0 +1,55 @@
+@use '../base/variables' as *;
+
+
+.testimonios {
+  h1, h2 {
+    font-family: $fuente-principal;
+    color: $color-principal;
+    text-align: center;
+  }
+
+  .testimonio-card {
+    background-color: $color-claro;
+    border-radius: $radius;
+    padding: 2rem;
+    box-shadow: $sombra-suave;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+
+    .testimonio-texto {
+      font-size: 1rem;
+      font-style: italic;
+      color: $color-texto;
+      margin-bottom: 1rem;
+      position: relative;
+
+      &::before {
+        content: "“";
+        font-size: 2rem;
+        position: absolute;
+        left: -1rem;
+        top: -0.5rem;
+        color: $color-principal;
+      }
+
+      &::after {
+        content: "”";
+        font-size: 2rem;
+        position: absolute;
+        right: -1rem;
+        bottom: -0.5rem;
+        color: $color-principal;
+      }
+    }
+
+    .testimonio-nombre {
+      font-size: 1rem;
+      font-weight: 600;
+      color: $color-principal;
+      text-align: right;
+    }
+  }
+}

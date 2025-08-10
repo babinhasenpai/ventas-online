@@ -2,9 +2,8 @@
   background-color: $bg;
   border-radius: $radius;
   box-shadow: $sombra;
-  transition: transform 0.3s ease;
+}
 
-  &:hover {
-    transform: translateY(-5px);
-  }
+@mixin responsive-text($min, $max) {
+  font-size: clamp($min, 2vw, $max);
 }

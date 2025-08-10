@@ -1,5 +1,7 @@
+// Tipografía
 $fuente-principal: Arial, Helvetica, sans-serif;
 
+// Colores
 $color-principal: #2c3e50;
 $color-secundario: #34495e;
 $color-blanco: #fff;
@@ -8,8 +10,10 @@ $color-claro: #f9f9f9;
 $color-texto: #555;
 $color-fondo: #f4f4f4;
 
+// Sombras y bordes
 $sombra-suave: 0 2px 5px rgba(0, 0, 0, 0.1);
 $radius: 8px;
 
-$breakpoint-sm: 576px;
-$breakpoint-md: 768px;
+// Breakpoints 
+$breakpoint-sm: 36em; // 576px
+$breakpoint-md: 48em; // 768px

@@ -1,0 +1,41 @@
+@use '../base/variables' as *;
+@use '../base/mixins' as *;
+@use '../base/animaciones' as *;
+
+.beneficios-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  padding-block: 2rem;
+}
+
+.beneficio-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+  @include tarjeta-visual($color-claro, $radius, 0 4px 12px rgba(0, 0, 0, 0.08));
+  animation: fade-in 0.6s ease-out;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+
+  &:hover {
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+    transform: translateY(-2px);
+  }
+
+  .beneficio-icono {
+    width: 48px;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  .beneficio-texto {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+}

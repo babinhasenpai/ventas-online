@@ -1,11 +1,16 @@
 @use '../base/variables' as *;
 
-footer {
+.footer {
   background-color: $color-principal;
-  color: $color-blanco;
-  text-align: center;
+  color: $color-acento; 
   padding: 20px;
   margin-top: 40px;
+  text-align: center;
+
+  p {
+    color: $color-acento; 
+    margin-bottom: 0.5rem;
+  }
 
   .social-links {
     margin-top: 15px;
@@ -18,6 +23,11 @@ footer {
 
       &:hover {
         color: $color-blanco;
+      }
+
+      i {
+        margin-right: 8px;
+        color: $color-acento; 
       }
     }
   }
