@@ -1,51 +1,79 @@
-@use '../base/mixins' as *;
-@use '../base/variables' as *;
+@use "../base/mixins" as *;
+@use "../base/variables" as *;
 
 .producto-section {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-  padding: 20px;
-}
+  padding: 40px 20px;
+  background-color: $color-fondo;
 
-.producto-tarjeta {
-  @include tarjeta-visual($color-blanco);
-  padding: 15px;
-  text-align: center;
-  animation: fade-in 0.8s ease-out;
- 
-
-  img {
-    max-width: 100%;
-    height: auto;
-    object-fit: cover;
-    border-radius: $radius;
-    margin-bottom: 10px;
-  }
-
-  h3 {
-    font-size: 1.3rem;
-    margin-bottom: 10px;
+  h2 {
+    font-size: 2rem;
+    margin: 60px 0 30px;
     color: $color-principal;
+    text-align: center;
+    position: relative;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 60px;
+      height: 3px;
+      background-color: $color-principal;
+      margin: 10px auto 0;
+      border-radius: 2px;
+    }
   }
 
-  p {
-    font-size: 1rem;
-    color: $color-texto;
-    margin-bottom: 15px;
+  .producto-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
   }
 
-  button {
-    padding: 10px 20px;
-    background-color: $color-principal;
-    color: $color-blanco;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+  .producto-tarjeta {
+    @include tarjeta-visual($color-blanco);
+    padding: 20px;
+    text-align: center;
+    animation: fade-in 0.8s ease-out;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 
     &:hover {
-      background-color: $color-secundario;
+      transform: translateY(-5px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: $radius;
+      margin-bottom: 15px;
+    }
+
+    h3 {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+      color: $color-principal;
+    }
+
+    p {
+      font-size: 1rem;
+      color: $color-texto;
+      margin-bottom: 20px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: $color-principal;
+      color: $color-blanco;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: $color-secundario;
+      }
     }
   }
 }

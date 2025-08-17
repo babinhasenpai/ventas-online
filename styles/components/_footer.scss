@@ -1,14 +1,14 @@
-@use '../base/variables' as *;
+@use "../base/variables" as *;
 
-.footer {
+footer {
   background-color: $color-principal;
-  color: $color-acento; 
+  color: $color-acento;
   padding: 20px;
   margin-top: 40px;
   text-align: center;
 
   p {
-    color: $color-acento; 
+    color: $color-acento;
     margin-bottom: 0.5rem;
   }
 
@@ -27,7 +27,7 @@
 
       i {
         margin-right: 8px;
-        color: $color-acento; 
+        color: $color-acento;
       }
     }
   }
