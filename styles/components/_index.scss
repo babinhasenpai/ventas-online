@@ -1,109 +1,112 @@
 @use "../base/variables" as *;
+@use "../base/mixins" as *;
 @use "sass:color";
 
-.hero {
+.intro {
+  background-color: $color-fondo;
+  padding: 6rem 2rem;
   text-align: center;
-  padding: 4rem 2rem;
 
-  h1 {
+  h2 {
+    @include responsive-text(2rem, 3rem);
     color: $color-principal;
-    font-size: 2.5rem;
-    font-weight: 700;
     margin-bottom: 1rem;
   }
 
   p {
-    color: $color-texto;
     font-size: 1.2rem;
+    color: $color-texto;
     margin-bottom: 2rem;
   }
 
-  .btn-hero {
-    background-color: $color-acento;
-    color: $color-blanco;
-    padding: 0.8rem 2rem;
+  .boton-principal {
+    @include btn-base($color-acento);
     border-radius: 999px;
-    font-weight: 600;
-    text-decoration: none;
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
     display: inline-block;
-    transition: background-color 0.3s ease;
-
-    &:hover {
-      background-color: color.adjust($color-acento, $lightness: -10%);
-    }
   }
 }
 
-.categorias {
-  text-align: center;
-  padding: 3rem 2rem;
+.destacados {
+  background-color: $color-claro;
+  padding: 4rem 2rem;
 
   h2 {
+    @include responsive-text(1.8rem, 2.5rem);
     color: $color-principal;
-    font-size: 2rem;
-    margin-bottom: 2rem;
+    text-align: center;
+    margin-bottom: 3rem;
   }
 
-  .categoria-grid {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    flex-wrap: wrap;
+  .grid-productos {
+    @include grid-responsive(280px, 2rem);
+  }
 
-    button {
-      background-color: $color-claro;
+  .producto {
+    @include tarjeta-visual($color-blanco);
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+    }
+
+    img {
+      width: 100%;
+      border-radius: $radius;
+      margin-bottom: 1rem;
+    }
+
+    h3 {
+      font-size: 1.2rem;
       color: $color-principal;
-      font-size: 1rem;
-      padding: 0.6rem 1.6rem;
-      border: 1px solid $color-principal;
-      border-radius: 999px;
-      font-family: $fuente-principal;
-      cursor: pointer;
-      transition: all 0.3s ease;
+      margin-bottom: 0.5rem;
+    }
 
-      &:hover {
-        background-color: color.adjust($color-acento, $lightness: -10%);
-        color: $color-blanco;
-        border-color: color.adjust($color-acento, $lightness: -10%);
-        transform: translateY(-2px);
-      }
+    p {
+      font-size: 0.95rem;
+      color: $color-texto;
+      margin-bottom: 1rem;
+    }
+
+    .boton-secundario {
+      @include btn-base($color-acento);
+      padding: 0.6rem 1.5rem;
+      font-size: 0.95rem;
+      display: inline-block;
     }
   }
 }
 
-.frase-marca {
-  text-align: center;
-  padding: 2rem 2rem;
-
-  p {
-    font-size: 1.2rem;
-    color: $color-texto;
-    font-style: italic;
+.testimonio {
+  .cita-clienta {
+    .atribucion {
+      margin-top: 1rem;
+      font-weight: bold;
+      color: $color-acento;
+    }
   }
 }
 
-.cta-final {
+.cta {
+  background-color: $color-claro;
+  padding: 4rem 2rem;
   text-align: center;
-  padding: 3rem 2rem;
 
   h2 {
+    @include responsive-text(1.8rem, 2.5rem);
     color: $color-principal;
-    font-size: 1.8rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
   }
 
-  .btn-cta {
-    background-color: $color-acento;
-    color: $color-blanco;
-    padding: 0.8rem 2rem;
+  .boton-principal {
+    @include btn-base($color-acento);
     border-radius: 999px;
-    font-weight: 600;
-    text-decoration: none;
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
     display: inline-block;
-    transition: background-color 0.3s ease;
-
-    &:hover {
-      background-color: color.adjust($color-acento, $lightness: -10%);
-    }
   }
 }

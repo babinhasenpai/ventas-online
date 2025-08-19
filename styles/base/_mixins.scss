@@ -1,4 +1,11 @@
-@mixin tarjeta-visual($bg, $radius: 8px, $sombra: 0 2px 5px rgba(0, 0, 0, 0.1)) {
+@use "sass:color";
+@use "./variables" as *;
+
+@mixin tarjeta-visual(
+  $bg: $color-fondo-tarjeta,
+  $radius: $radius,
+  $sombra: $sombra-suave
+) {
   background-color: $bg;
   border-radius: $radius;
   box-shadow: $sombra;
@@ -6,4 +13,50 @@
 
 @mixin responsive-text($min, $max) {
   font-size: clamp($min, 2vw, $max);
+}
+
+@mixin btn-base($bg, $color: $color-blanco) {
+  background-color: $bg;
+  color: $color;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: $radius;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: color.adjust($bg, $lightness: -10%);
+  }
+}
+
+@mixin input-base {
+  padding: 0.75rem;
+  border: 1px solid $color-borde-input;
+  border-radius: $radius;
+  font-size: 1rem;
+  font-family: $fuente-principal;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+  &:focus {
+    outline: none;
+    border-color: $color-acento;
+    box-shadow: 0 0 0 3px rgba($color-acento, 0.25);
+  }
+}
+
+@mixin grid-responsive($min: 280px, $gap: 1.5rem) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax($min, 1fr));
+  gap: $gap;
+}
+
+@mixin link-estilo($color, $hover-color) {
+  color: $color;
+  text-decoration: none;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: $hover-color;
+  }
 }

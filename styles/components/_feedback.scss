@@ -1,18 +1,22 @@
-@use '../base/variables' as *;
-
+@use "../base/variables" as *;
+@use "../base/mixins" as *;
 
 .testimonios {
-  h1, h2 {
+  padding: $padding-seccion;
+
+  h1,
+  h2 {
     font-family: $fuente-principal;
     color: $color-principal;
     text-align: center;
+    margin-bottom: 2rem;
   }
 
   .testimonio-card {
-    background-color: $color-claro;
-    border-radius: $radius;
+    @include tarjeta-visual($color-claro);
     padding: 2rem;
-    box-shadow: $sombra-suave;
+    max-width: 500px;
+    margin: 0 auto 2rem;
     transition: transform 0.3s ease;
 
     &:hover {
@@ -25,23 +29,25 @@
       color: $color-texto;
       margin-bottom: 1rem;
       position: relative;
+      padding: 0 1.5rem;
+
+      &::before,
+      &::after {
+        font-size: 2rem;
+        color: $color-principal;
+        position: absolute;
+      }
 
       &::before {
         content: "“";
-        font-size: 2rem;
-        position: absolute;
-        left: -1rem;
+        left: 0;
         top: -0.5rem;
-        color: $color-principal;
       }
 
       &::after {
         content: "”";
-        font-size: 2rem;
-        position: absolute;
-        right: -1rem;
+        right: 0;
         bottom: -0.5rem;
-        color: $color-principal;
       }
     }
 

@@ -23,7 +23,7 @@
     transition: background-color 0.3s;
 
     &:hover {
-      background-color: $color-secundario;
+      background-color: darken($color-principal, 10%);
     }
   }
 }

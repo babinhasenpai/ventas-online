@@ -1,29 +1,24 @@
 @use "../base/variables" as *;
+@use "../base/mixins" as *;
 
 footer {
   background-color: $color-principal;
   color: $color-acento;
   padding: 20px;
-  margin-top: 40px;
   text-align: center;
 
   p {
-    color: $color-acento;
+    font-size: 1.1rem;
     margin-bottom: 0.5rem;
+    color: $color-acento;
   }
 
   .social-links {
     margin-top: 15px;
 
     a {
-      color: $color-acento;
-      text-decoration: none;
+      @include link-estilo($color-acento, $color-blanco);
       margin: 0 10px;
-      transition: color 0.3s;
-
-      &:hover {
-        color: $color-blanco;
-      }
 
       i {
         margin-right: 8px;
@@ -33,11 +28,6 @@ footer {
   }
 
   a {
-    color: $color-acento;
-    text-decoration: none;
-
-    &:hover {
-      color: $color-blanco;
-    }
+    @include link-estilo($color-acento, $color-blanco);
   }
 }

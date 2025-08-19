@@ -62,33 +62,66 @@
     </header>
 
     <!-- Main -->
-    <main class="container my-5">
-      <h1 class="text-center mb-4">Contacto</h1>
-      <p class="text-center mb-5">
-        ¿Tenés dudas, sugerencias o querés saber más sobre nuestros productos?
-        Completá el formulario y te responderemos a la brevedad.
-      </p>
+    <main class="container py-5">
+      <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+          <div class="card shadow-sm border-0">
+            <div class="card-body p-4">
+              <h1 class="text-center mb-4 text-primary">
+                <i class="fas fa-envelope-open-text me-2"></i>Contacto
+              </h1>
 
-      <form>
-        <div class="mb-3">
-          <label for="nombre" class="form-label">Nombre</label>
-          <input type="text" class="form-control" id="nombre" required />
+              <form action="#" method="post">
+                <fieldset>
+                  <legend class="mb-3">Envíanos tu mensaje</legend>
+
+                  <div class="mb-3">
+                    <label for="nombre" class="form-label">Nombre</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="nombre"
+                      name="nombre"
+                      placeholder="Tu nombre completo"
+                      required
+                    />
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="email" class="form-label"
+                      >Correo electrónico</label
+                    >
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="email"
+                      name="email"
+                      placeholder="ejemplo@correo.com"
+                      required
+                    />
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="mensaje" class="form-label">Mensaje</label>
+                    <textarea
+                      class="form-control"
+                      id="mensaje"
+                      name="mensaje"
+                      rows="4"
+                      placeholder="Escribe aquí tu consulta"
+                      required
+                    ></textarea>
+                  </div>
+
+                  <button type="submit" class="btn btn-success w-100">
+                    <i class="fas fa-paper-plane me-2"></i>Enviar
+                  </button>
+                </fieldset>
+              </form>
+            </div>
+          </div>
         </div>
-        <div class="mb-3">
-          <label for="email" class="form-label">Correo electrónico</label>
-          <input type="email" class="form-control" id="email" required />
-        </div>
-        <div class="mb-3">
-          <label for="mensaje" class="form-label">Mensaje</label>
-          <textarea
-            class="form-control"
-            id="mensaje"
-            rows="6"
-            required
-          ></textarea>
-        </div>
-        <button type="submit" class="btn btn-success">Enviar</button>
-      </form>
+      </div>
     </main>
 
     <!-- Footer -->

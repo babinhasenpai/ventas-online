@@ -1,11 +1,8 @@
-@use '../base/variables' as *;
-@use '../base/mixins' as *;
-@use '../base/animaciones' as *;
+@use "../base/variables" as *;
+@use "../base/mixins" as *;
 
 .beneficios-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
+  @include grid-responsive(280px, 1.5rem);
   padding-block: 2rem;
 }
 
@@ -14,7 +11,7 @@
   align-items: center;
   gap: 1rem;
   padding: 1rem 1.5rem;
-  @include tarjeta-visual($color-claro, $radius, 0 4px 12px rgba(0, 0, 0, 0.08));
+  @include tarjeta-visual($color-claro); // Aplica estilos de tarjeta visual
   animation: fade-in 0.6s ease-out;
   transition: box-shadow 0.3s ease, transform 0.3s ease;
 
@@ -34,8 +31,8 @@
   }
 
   .beneficio-texto {
-    margin: 0;
     font-size: 1rem;
     font-weight: 500;
+    margin: 0;
   }
 }

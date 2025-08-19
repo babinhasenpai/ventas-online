@@ -1,19 +1,33 @@
+@use "sass:color";
+
 // Tipografía
 $fuente-principal: Arial, Helvetica, sans-serif;
+$tamano-texto-base: 1rem;
+$tamano-titulo: clamp(2rem, 2vw, 3rem);
+$tamano-subtitulo: clamp(1.5rem, 2vw, 2rem);
 
 // Colores
-$color-principal: #2c3e50;
+$color-principal: #243e5a;
 $color-secundario: #34495e;
-$color-blanco: #fff;
+$color-blanco: #ffffff;
 $color-acento: #1abc9c;
 $color-claro: #f9f9f9;
 $color-texto: #555;
+$color-texto-claro: #f4f4f4;
 $color-fondo: #f4f4f4;
+$color-borde-input: $color-claro;
+$color-fondo-tarjeta: #fff;
+$color-hover: color.adjust($color-acento, $lightness: -10%);
 
 // Sombras y bordes
 $sombra-suave: 0 2px 5px rgba(0, 0, 0, 0.1);
 $radius: 8px;
 
-// Breakpoints 
+// Espaciado y layout
+$espaciado-base: 1rem;
+$padding-seccion: 3rem 2rem;
+$max-ancho: 1200px;
+
+// Breakpoints
 $breakpoint-sm: 36em; // 576px
 $breakpoint-md: 48em; // 768px

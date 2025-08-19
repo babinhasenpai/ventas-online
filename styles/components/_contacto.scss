@@ -1,0 +1,63 @@
+// contacto.scss
+@use "../base/variables" as *;
+@use "../base/mixins" as *;
+
+.contacto-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem 1rem;
+}
+
+.contacto-filtros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.producto-section {
+  padding: 2rem 1rem;
+
+  h2 {
+    @include responsive-text(1.5rem, 2.25rem);
+    color: $color-principal;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+}
+
+.producto-grid {
+  @include grid-responsive(280px, 2rem);
+  margin-bottom: 3rem;
+}
+
+.producto-tarjeta {
+  @include tarjeta-visual($color-fondo, $radius, $sombra-suave);
+  padding: 1rem;
+  text-align: center;
+
+  img {
+    width: 100%;
+    border-radius: $radius;
+    margin-bottom: 1rem;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: $color-texto;
+  }
+
+  p {
+    font-size: 0.95rem;
+    color: $color-secundario;
+    margin-bottom: 1rem;
+  }
+
+  button {
+    @include btn-base($color-acento);
+    width: 100%;
+  }
+}

@@ -1,7 +1,8 @@
 @use "../base/variables" as *;
+@use "../base/mixins" as *;
 
 main {
-  max-width: 1200px;
+  max-width: $max-ancho;
   margin: 0 auto;
   padding: 40px 30px;
 }
@@ -10,7 +11,7 @@ main {
   margin-bottom: 40px;
 
   h2 {
-    font-size: 2rem;
+    @include responsive-text(1.8rem, 2.5rem);
     color: $color-principal;
     margin-bottom: 20px;
     text-align: center;
@@ -18,15 +19,5 @@ main {
 }
 
 .contenedor-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-
-  @media (max-width: $breakpoint-md) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  @media (max-width: $breakpoint-sm) {
-    grid-template-columns: 1fr;
-  }
+  @include grid-responsive(280px, 20px);
 }
