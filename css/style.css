@@ -466,6 +466,29 @@ main {
   justify-content: center;
 }
 
+.info-contacto {
+  padding: 2rem 1rem;
+  text-align: center;
+}
+.info-contacto h2 {
+  font-size: clamp(1.5rem, 2vw, 2.25rem);
+  color: #243e5a;
+  margin-bottom: 1rem;
+}
+.info-contacto p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+.info-contacto .datos-extra {
+  margin-top: 1.5rem;
+}
+.info-contacto .datos-extra p {
+  font-size: 1rem;
+  color: #34495e;
+  margin-bottom: 0.5rem;
+}
+
 .producto-section {
   padding: 2rem 1rem;
 }

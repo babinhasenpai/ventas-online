@@ -1,4 +1,3 @@
-// contacto.scss
 @use "../base/variables" as *;
 @use "../base/mixins" as *;
 
@@ -14,6 +13,33 @@
   flex-wrap: wrap;
   gap: 1rem;
   justify-content: center;
+}
+
+.info-contacto {
+  padding: 2rem 1rem;
+  text-align: center;
+
+  h2 {
+    @include responsive-text(1.5rem, 2.25rem);
+    color: $color-principal;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 1.1rem;
+    color: $color-texto;
+    margin-bottom: 1rem;
+  }
+
+  .datos-extra {
+    margin-top: 1.5rem;
+
+    p {
+      font-size: 1rem;
+      color: $color-secundario;
+      margin-bottom: 0.5rem;
+    }
+  }
 }
 
 .producto-section {
